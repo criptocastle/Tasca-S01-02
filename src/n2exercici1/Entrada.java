@@ -3,17 +3,19 @@ package n2exercici1;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Entrada {
+public class Entrada { //controlar excepcions
 
 	private static Scanner entrada = new Scanner(System.in);
-	private String missatge = "Introdueix la teva edat: ";
+	private String missatge;
 	private static boolean inputError = false;
 
-	public String getMissatge() {
-		return missatge;
+	
+	public Entrada(String missatge) {
+		this.missatge = "Introdueix la teva edat: ";
 	}
-
-//repetir o optimitzar codi cridant els mètodes al main i fent el try catch alla? Entrada.llegirByte("", 0);	
+	
+	
+	//repetir o optimitzar codi cridant els mètodes al main i fent el try catch alla? Entrada.llegirByte("", 0);	
 
 	public static byte llegirByte(String missatge, byte edat) { // repetir igual per la resta de metodes
 
@@ -66,4 +68,5 @@ public class Entrada {
 
 		return edat;
 	}
+	
 }

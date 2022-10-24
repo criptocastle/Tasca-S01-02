@@ -2,9 +2,15 @@ package n1exercici1;
 
 public class VendaBuidaException extends Exception {
 
-	// Constructors
-	public VendaBuidaException(String s) {
-		
-		
+	private static final long serialVersionUID = 1L;
+
+	public VendaBuidaException() {
+
 	}
+
+	public VendaBuidaException(String errorMessage) {
+		super(errorMessage);
+
+	}
+
 }

@@ -3,43 +3,44 @@ package n1exercici1;
 import java.util.ArrayList;
 
 public class Venda {
-	private ArrayList<Producte> productes = new ArrayList<Producte>(); // coleccion productos
-	private static double preuTotalVenda;
 
-	
-	
-	public ArrayList<Producte> getProductes() {
-		return productes;
+	private static ArrayList<Product> products = new ArrayList<Product>(); // coleccion productos
+	private static double sellTotalPrice;
+
+//constructor buit
+	public Venda() {
+
 	}
 
-	public void setProductes(ArrayList<Producte> productes) {
-		this.productes = productes;
+// getters
+	public static ArrayList<Product> getProducts() {
+		return products;
 	}
 
-	public static double getPreuTotalVenda() {
-		return preuTotalVenda;
-	}
+//setters
 
-	public static void setPreuTotalVenda(double preuTotalVenda) {
-		Venda.preuTotalVenda = preuTotalVenda;
+	public void setProducts(ArrayList<Product> products) {
+		this.products = products;
 	}
-
 	
 	
-	// metode
-	public static void calcularTotal(ArrayList<Producte> productes, double preuTotalVenda) throws VendaBuidaException {
-		Producte producte = new Producte("", 0);
+// methods
+	public void addToArrayList(Product pr) {
+		products.add(pr);
+	}
 
-		if (productes.size() <= 0) { // falta index mes gran que array.size
+	public static void calcularTotal() throws VendaBuidaException {
+
+		if (products.isEmpty()) {
 			throw new VendaBuidaException("Per fer una venda primer has d'afegir productes");
 
 		} else {
-			for (int i = 0; i <= productes.size(); i++) {
-				producte = productes.get(i);
-				preuTotalVenda += producte.getPreu();
+			for (int i = 0; i <= products.size(); i++) {
+				sellTotalPrice += products.get(i).getPrice();
 			}
 
 		}
+		System.out.println("El preu total de la venda és: " + sellTotalPrice);
 	}
 
 }
