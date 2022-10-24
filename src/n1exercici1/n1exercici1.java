@@ -17,7 +17,7 @@ public class n1exercici1 {
 			System.out.println("ArrayIndexOutOfBoundsException: " + e.getMessage());
 
 		}
-
+		
 		Venda month = new Venda();
 		
 		Product p1 = new Product("taula", 100);
