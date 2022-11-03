@@ -7,10 +7,6 @@ public class Venda {
 	private static ArrayList<Product> products = new ArrayList<Product>(); // coleccion productos
 	private static double sellTotalPrice;
 
-//constructor buit
-	public Venda() {
-
-	}
 
 // getters
 	public static ArrayList<Product> getProducts() {
@@ -35,7 +31,7 @@ public class Venda {
 			throw new VendaBuidaException("Per fer una venda primer has d'afegir productes");
 
 		} else {
-			for (int i = 0; i <= products.size(); i++) {
+			for (int i = 0; i < products.size(); i++) {
 				sellTotalPrice += products.get(i).getPrice();
 			}
 

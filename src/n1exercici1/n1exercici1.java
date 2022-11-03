@@ -10,13 +10,14 @@ public class n1exercici1 {
 
 		
 	//test amb arraylist buida
-		try {
-			Venda.calcularTotal();
-
-		} catch (ArrayIndexOutOfBoundsException e) {
-			System.out.println("ArrayIndexOutOfBoundsException: " + e.getMessage());
-
-		}
+	/*
+	 * try { Venda.calcularTotal();
+	 * 
+	 * } catch (ArrayIndexOutOfBoundsException e) {
+	 * System.out.println("ArrayIndexOutOfBoundsException: " + e.getMessage());
+	 * 
+	 * }
+	 */
 		
 		Venda month = new Venda();
 		
